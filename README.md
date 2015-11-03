@@ -20,4 +20,19 @@ Server Version: version.Info{Major:"1", Minor:"0", GitVersion:"v1.0.6", GitCommi
 master | 10.128.112.15
 worker1 | 10.128.112.25
 worker2 | 10.128.112.26
+
 為了符合K8S的网络需求，flannel的虚拟联网功能建立覆盖（ overlay ）网络`11.1.0.0/16`。每个worker先分到一块网络，再分配给容器（pod）。
+
+服务器 名称 | 覆盖网络
+------------ | -------------
+worker1 | 11.1.92.0/24
+worker2 | 11.1.81.0/24
+
+pod 名称 | IP
+------------ | -------------
+frontend-60e4n | 11.1.92.20
+frontend-b7tgj | 11.1.81.5
+redis-master-207ve | 11.1.92.21
+redis-slave-0rkpg | 11.1.81.7
+heapster-knf9o | 11.1.92.25
+
