@@ -14,9 +14,10 @@ $ ./kubectl version
 Client Version: version.Info{Major:"1", Minor:"0", GitVersion:"v1.0.6", GitCommit:"388061f00f0d9e4d641f9ed4971c775e1654579d", GitTreeState:"clean"}
 Server Version: version.Info{Major:"1", Minor:"0", GitVersion:"v1.0.6", GitCommit:"388061f00f0d9e4d641f9ed4971c775e1654579d", GitTreeState:"clean"}
 ```
-##网路
+##网络
 服务器 名称 | IP
 ------------ | -------------
 master | 10.128.112.15
 worker1 | 10.128.112.25
 worker2 | 10.128.112.26
+為了符合K8S的网络需求，flannel的虚拟联网功能建立覆盖（ overlay ）网络`11.1.0.0/16`。每个worker先分到一块网络，再分配给容器（pod）。
