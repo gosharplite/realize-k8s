@@ -15,6 +15,8 @@ Client Version: version.Info{Major:"1", Minor:"0", GitVersion:"v1.0.6", GitCommi
 Server Version: version.Info{Major:"1", Minor:"0", GitVersion:"v1.0.6", GitCommit:"388061f00f0d9e4d641f9ed4971c775e1654579d", GitTreeState:"clean"}
 ```
 ##网络
+实体服务器位于DMZ网络**`10.128.112.0/24`**。
+
 服务器 名称 | IP
 ------------ | -------------
 master | 10.128.112.15
